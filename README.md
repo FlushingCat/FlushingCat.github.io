@@ -24,9 +24,9 @@
 # Introduction
 The LandMark supports multiple types of parrllel methods.With the methods， we achieve huge NeRF speedups and make the NeRF truly applicable to city-scale reconstruction.<br>
 These parallel methods mainly include the following types:
--Branch Parrallel
--Plane Parrallel
--Channel Parrallel
+- Branch Parrallel
+- Plane Parrallel
+- Channel Parrallel
 Here we present how our parrallel methods work.
 # Basic GridNeRF
 TODO
