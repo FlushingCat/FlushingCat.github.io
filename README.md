@@ -1,6 +1,6 @@
 <p align="center">
     <picture>
-    <img src="[https://github.com/FlushingCat/LandMark_media_content/blob/main/Icon.png?raw=true](https://github.com/FlushingCat/LandMark_Media_Content/blob/main/logo.png?raw=true)" width="600">
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/logo.png?raw=true" width="600">
     </picture>
 </p>
 
@@ -8,16 +8,16 @@
 
 <p align="center">
     <picture>
-    <img src="[https://github.com/FlushingCat/LandMark_media_content/blob/main/wukang.gif?raw=true](https://github.com/FlushingCat/LandMark_Media_Content/blob/main/zhujiajiao.gif?raw=true)" width="300">
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/zhujiajiao.gif?raw=true" width="300">
     </picture>
     <picture>
-    <img src="[https://github.com/FlushingCat/LandMark_media_content/blob/main/xian.gif?raw=true](https://github.com/FlushingCat/LandMark_Media_Content/blob/main/wukang.gif?raw=true)" width="300">
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/wukang.gif?raw=true" width="300">
     </picture>
     <picture>
-    <img src="[https://github.com/FlushingCat/LandMark_media_content/blob/main/zhita.gif?raw=true](https://github.com/FlushingCat/LandMark_Media_Content/blob/main/xian.gif?raw=true)" width="300">
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/xian.gif?raw=true" width="300">
     </picture>
     <picture>
-    <img src="[https://github.com/FlushingCat/LandMark_media_content/blob/main/zhita.gif?raw=true](https://github.com/FlushingCat/LandMark_Media_Content/blob/main/sanjiantao.gif?raw=true)" width="300">
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/sanjiantao.gif?raw=true" width="300">
     </picture>
 </p>
 
