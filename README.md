@@ -24,6 +24,7 @@ The LandMark supports multiple types of parrllel strategies. With the strategies
 
 Here we present how our parrallel methods work. Basic knowledges of NeRFs are needed for better understanding.
 # Branch Parrallel
+
 <p align="center">
 <picture>
     <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/multi-branch%20model.png?raw=true" width="600">
@@ -31,7 +32,25 @@ Here we present how our parrallel methods work. Basic knowledges of NeRFs are ne
 </p>
 
 The scene area is divided into multiple scene blocks. Correspondingly, the model changes from having a single large grid to multiple sub-grids. with each sub-grid representing a scene block. All sub-grids share the same MLPs to decode features and ouput rgbσ. All the sub-grid and the shared MLPs consitiute a complete multi-branch large model. When a point sampled along the ray is fed into the multi-branch model, it is first assigned to the corresponding sub-grid based on its coordinate, and then inferred with this branch.
+
+<p align="center">
+<picture>
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/Branch.png?raw=true" width="600">
+</picture>
+</p>
+
 # Plane Parrallel
-TODO
+
+<p align="center">
+<picture>
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/plane.png?raw=true" width="600">
+</picture>
+</p>
+
 # Channel Parrallel
-TODO
+
+<p align="center">
+<picture>
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/channel.png?raw=true" width="600">
+</picture>
+</p>
