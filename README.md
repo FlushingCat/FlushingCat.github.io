@@ -9,11 +9,11 @@
 # Introduction
 There are many one-of-a-kind highlights in the LandMark:
 
-- Large-scale, high-precision Reconstrution
+- Large-scale, high-precision Reconstrution:
     - For the first time, efficient training of 100 square kilometers of city-scale NeRF was realized, and the rendering resolution reached 4K with model parameters over 200 billions.
-- Multiple feature extentions
+- Multiple feature extentions:
     - Rich capabilities beyond reconstruction, including ajusting urban layout such as removing or adding a buildings, and ajusting appearance style such as lighting changes related to seasons.
-- Training, rendering integrated system
+- Training, rendering integrated system:
     - City-scale NeRF system covering algorithms, operators, computing systems, which provides a solid foundation for the training, rendering and application of real-world 3D large models.
 
 The LandMark supports multiple types of parrllel strategies. With the strategies, we achieve huge NeRF speedups and make the NeRF truly applicable to city-scale reconstruction. These parallel strategies mainly include the following types:
