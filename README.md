@@ -31,15 +31,27 @@ Here we present how our parrallel methods work. Basic knowledges of NeRFs are ne
 </picture>
 </p>
 
-The scene area is divided into multiple scene blocks. Correspondingly, the model changes from having a single large grid to multiple sub-grids. with each sub-grid representing a scene block. All sub-grids share the same MLPs to decode features and ouput rgbσ. All the sub-grid and the shared MLPs consitiute a complete multi-branch large model. When a point sampled along the ray is fed into the multi-branch model, it is first assigned to the corresponding sub-grid based on its coordinate, and then inferred with this branch.
+The scene area is divided into multiple scene blocks. Correspondingly, the model changes from having a single large grid to multiple sub-grids. with each sub-grid representing a scene block. 
+
+All sub-grids share the same MLPs to decode features and ouput rgbσ. All the sub-grid and the shared MLPs consitiute a complete multi-branch large model. 
+
+When a point sampled along the ray is fed into the multi-branch model, it is first assigned to the corresponding sub-grid based on its coordinate, and then inferred with this branch.
 
 <p align="center">
 <picture>
-    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/Branch.png?raw=true" width="600">
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/Branch.png?raw=true" width="500">
 </picture>
 </p>
 
 # Plane Parrallel
+
+Plane parallel devides the full plane into multiple sub-plane, and then scatters to different devices. Thus, each device holds a part of the full plane. Apart from the plane, the remaining modules are replicated across all devices, and their parameters are shared among all devices.
+
+During training, when a point sampled along the ray is fed into the model, it is first assigned to the sub-plane and the corresponding device based on its x-y coordinate. and then inferred on the device to get its rgbσ value. After inferring a batch of points, the rgbσ value are gathered across all devices.
+
+After training with plane parallel, the weights of all sub-planes can be merged into a full plane. In this way, the model trained with plane parallel can be rendered just like a single model.
+
+Alternatively, the plane weights keep seperate without merge, then the model is rendered just follows the infering way in training.
 
 <p align="center">
 <picture>
@@ -49,8 +61,10 @@ The scene area is divided into multiple scene blocks. Correspondingly, the model
 
 # Channel Parrallel
 
+In Channel Parallel, both feature plane and feature line are sharded along the channel dimension. The features computed by grid_sample are also sharded along the channel dimension. Then we can get a full-channel feature if we do gather/all-gather on these sharded features.
+
 <p align="center">
 <picture>
-    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/channel.png?raw=true" width="600">
+    <img src="https://github.com/FlushingCat/LandMark_Media_Content/blob/main/channel.png?raw=true" width="300">
 </picture>
 </p>
